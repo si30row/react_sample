@@ -1,0 +1,80 @@
+.app {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'sidebar content';
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 270px 1fr;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+.content {
+  grid-area: content;
+  padding: 1rem;
+}
+
+.menu {
+  list-style-type: none; /* デフォルトのリストスタイルを無効にする */
+  padding: 0; /* 内側の余白を取り除く */
+  margin: 0; /* 外側の余白を取り除く */
+}
+
+.menu li {
+  padding: 10px 0; /* 上下のパディングを設定し、左右にはパディングを設定しない */
+  margin-left: -20px; /* 左側にマージンを設定して左寄せにする */
+  border-bottom: 1px solid #ddd; /* 各項目の下にボーダーを付ける */
+}
+
+.menu li:hover {
+  background-color: #eee; /* ホバー時の背景色を変更 */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  /* tbody内のセルより手前に表示する */
+  z-index: 1;
+}
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.button_no_select_text {
+  user-select: none; /* ボタンのテキスト選択を無効にする */
+}
